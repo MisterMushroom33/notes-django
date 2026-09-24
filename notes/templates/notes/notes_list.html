@@ -1,0 +1,13 @@
+{% extends 'notes/home.html' %}
+
+{% block content %}
+    <h2>Все заметки</h2>
+    {% for note in notes %}
+        <div class="note note-{{ note.theme }}">
+            <h3>{{ note.title }}</h3>
+            <p>{{ note.text }}</p>
+        </div>
+    {% empty %}
+        <p>Заметок пока нет.</p>
+    {% endfor %}
+{% endblock %}

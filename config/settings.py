@@ -118,6 +118,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'notes' / 'static',
+]
+
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
