@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="theme-{{ current_theme }}">
+    <header>
+        <h1>Мои заметки</h1>
+        <nav>
+            <a href="{% url 'notes_list' %}">Все заметки</a>
+            <a href="{% url 'add_note' %}">Добавить заметку</a>
+        </nav>
+        <div class="theme-switcher">
+            Тема:
+            <a href="{% url 'set_theme' 'light' %}">Светлая</a>
+            <a href="{% url 'set_theme' 'dark' %}">Тёмная</a>
+            <a href="{% url 'set_theme' 'blue' %}">Синяя</a>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

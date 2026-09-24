@@ -1,0 +1,22 @@
+{% extends 'notes/home.html' %}
+
+{% block content %}
+    <h2>Добавить новую заметку</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title">Заголовок:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="text">Текст заметки:</label>
+        <textarea id="text" name="text" rows="5" required></textarea>
+
+        <label for="theme">Тема заметки:</label>
+        <select id="theme" name="theme">
+            <option value="light">Светлая</option>
+            <option value="dark">Тёмная</option>
+            <option value="blue">Синяя</option>
+        </select>
+
+        <button type="submit">Сохранить</button>
+    </form>
+{% endblock %}
