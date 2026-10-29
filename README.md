@@ -19,8 +19,8 @@
 1. Клонировать репозиторий:
 
 ```
-git clone ССЫЛКА_НА_РЕПОЗИТОРИЙ
-cd НАЗВАНИЕ_ПАПКИ
+git clone https://github.com/MisterMushroom33/notes-django.git
+cd notes-django
 ```
 
 2. Создать виртуальное окружение:
